@@ -1,0 +1,158 @@
+\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
+
+\geometry{left=0.8cm,right=0.8cm,top=1cm,bottom=1cm,columnsep=0.8cm}
+
+\usepackage{paracol}
+
+\iftutex 
+  \setmainfont{Roboto Slab}
+  \setsansfont{Lato}
+  \renewcommand{\familydefault}{\sfdefault}
+\else
+  \usepackage[rm]{roboto}
+  \usepackage[defaultsans]{lato}
+  \renewcommand{\familydefault}{\sfdefault}
+\fi
+
+% Enhanced professional color scheme
+\definecolor{MainColor}{HTML}{1A5276}       % Deeper professional blue
+\definecolor{AccentColor}{HTML}{3498DB}     % Vibrant accent blue
+\definecolor{TextColor}{HTML}{2C3E50}       % Rich dark text color
+\definecolor{SubtleColor}{HTML}{7F8C8D}     % Keeping original subtle gray
+\definecolor{BackgroundColor}{HTML}{ECF0F1} % Light background (unchanged)
+
+\colorlet{name}{MainColor}
+\colorlet{tagline}{AccentColor}
+\colorlet{heading}{MainColor}
+\colorlet{headingrule}{AccentColor}
+\colorlet{subheading}{MainColor}
+\colorlet{accent}{AccentColor}
+\colorlet{emphasis}{TextColor}
+\colorlet{body}{SubtleColor}
+
+% Keep original font settings
+\renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+\renewcommand{\personalinfofont}{\footnotesize}
+\renewcommand{\cvsectionfont}{\large\rmfamily\bfseries}
+\renewcommand{\cvsubsectionfont}{\large\bfseries}
+
+% Consistent date formatting command with original color
+\newcommand{\daterange}[2]{#1 -- #2}
+
+% Modern bullet points and rating markers
+\renewcommand{\cvItemMarker}{{\small\faAngleRight}}
+\renewcommand{\cvRatingMarker}{\faStar}
+
+% If you still need the publications functionality
+\input{pubs-num.tex}
+\addbibresource{sample.bib}
+
+% Keep original spacing
+\setlength{\parskip}{0.1em}
+\setlength{\parsep}{0.1em}
+\setlength{\itemsep}{0.05em}
+
+\begin{document}
+
+% Move the photo to the left side
+\photoL{5.5cm}{tudor3}
+
+% Display personal information clearly
+\name{Tudor-Ioan Gălățan}
+\tagline{Computer Science - Student}
+
+\personalinfo{%
+  \email{galatan.tudor1@gmail.com} \phone{+40747762720} \location{Cluj-Napoca, Romania} \linkedin{tudor-galatan} \github{galatzanT}
+}
+
+\makecvheader
+
+\columnratio{0.33}
+
+\begin{paracol}{2}
+
+\cvsection{Education}
+
+\cvevent{Bachelor of Computer Science}{Babeș-Bolyai University 
+         Faculty of Mathematics and Computer Science
+}{\daterange{2023}{Present}}{Cluj-Napoca}
+
+\divider
+
+\cvevent{Tiberiu Popoviciu High School of Computer Science}{Mathematics and Computer Science}{\daterange{2019}{2023}}{Cluj-Napoca}
+
+\cvsection{Skills}
+\begin{itemize}
+\item Object Oriented Programming
+\item Problem Solving
+\item Assembly Language
+\item Python
+\item C
+\item C++
+\item C\#
+\item SQL
+\item Java
+\item Prolog
+\item Lisp
+\item HTML 
+\item CSS
+\item Shell
+\end{itemize}
+
+\cvsection{Languages}
+\begin{itemize}
+\item Romanian (Native)
+\item English (B2)
+\item German (A2)
+\end{itemize}
+
+\cvsection{Personal Strengths}
+\begin{itemize}
+\item Leadership
+\item Team work
+\item Positivity
+\item Adaptability
+\item Eye for detail 
+\end{itemize}
+
+\switchcolumn
+
+\cvsection{Profile}
+Salutations! I am Tudor-Ioan Gălățan, a Computer Science student in Cluj-Napoca. With a strong background in sports and a passion for fitness, I challenge myself to improve every day and stay disciplined in all areas, especially in my passion for technology. My greatest motivation comes from using my social skills to connect with others, identify their needs, provide technical solutions, and contribute to impactful projects. My goal is to create a positive change by combining my soft and technical skills.
+
+\cvsection{Experience}
+
+\textbf{Societatea Hermes}
+
+\cvsubsection{Manager of the Events Department \hfill \daterange{2024}{present}}
+\begin{itemize}
+\item Took initiative in organizing trainings, events, and competitions for students in our faculty as well as creating new concepts for networking opportunities in our organization
+\item Managed a team of 70 volunteers by engaging them in meetings, energizing games, and ensuring they created strong bonds and a sense of community
+\item Represented our association at DevFest, an IT conference in Cluj-Napoca
+\end{itemize}
+\cvsubsection{HR Volunteer \hfill \daterange{2023}{2024}}
+\begin{itemize}
+\item Coordinated the Emergency department at the 2024 edition of Hermes Hackathon, ensuring seamless staff availability and communication between hosts and corporate ambassadors
+\item Volunteered in organizing 2 editions of CariereinIT, fostering a welcoming atmosphere, encouraging proactive attitudes, and facilitating networking opportunities with company professionals.
+\end{itemize}
+\cvsubsection{Faculty Council \hfill \daterange{2024}{present}}
+\textbf{Student Representative for the Romanian Informatics Constituency}
+\begin{itemize}
+\item Maintained honest communication between the council and my colleagues
+\item Became familiar with issues presented by my colleagues and supported their interests in council meetings, communicating aspects to headmasters
+\end{itemize}
+\cvsubsection{Uniunea Studenților din România \hfill \daterange{2024}{present}}
+\textbf{Volunteer}
+\begin{itemize}
+\item Participated in the 'Leadership School' project, where it was required of me to explore and further strengthen my leadership skills. Through this valuable experience, I discovered my passion for mentoring and public speaking
+\item Participated in the 'Project Writing' program where I developed important skills in leading a project, conceptualization, and structuring
+\end{itemize}
+\cvsubsection{Sales Assistant \hfill \daterange{2023}{2024}}
+\textbf{H\&M}
+\begin{itemize}
+\item Became familiar with the work environment 
+\item Learned important and efficient time management by remaining proactive in my education and extracurricular activities while also taking extra shifts
+\end{itemize}
+
+\end{paracol}
+\end{document}
